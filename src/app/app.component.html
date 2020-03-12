@@ -2,12 +2,12 @@
   <div class="columns is-centered">
     <div class="box column is-one-third">
       <h1 class="title">Typing Game </h1>
-      <p>Random text string</p>
+      <p>{{ getSentence() }}</p>
       <div class="field">
-        <input class="input">
+        <input class="input" (input)="onChangeInput($event.target.value)">
       </div>
       <div class="box">
-        <h1 class="title">Messaging</h1>
+        <h1 class="title" [hidden]="successMessageHidden">Success</h1>
       </div>
     </div>
   </div>
