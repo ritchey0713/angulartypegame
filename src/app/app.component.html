@@ -6,8 +6,8 @@
       <div class="field">
         <input class="input" (input)="onChangeInput($event.target.value)">
       </div>
-      <div class="box">
-        <h1 class="title" [hidden]="successMessageHidden">Success</h1>
+      <div *ngIf="sentence === enteredText" class="box">
+        <h1 class="title">Success</h1>
       </div>
     </div>
   </div>

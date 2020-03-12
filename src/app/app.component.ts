@@ -9,14 +9,16 @@ import { lorem } from 'faker'
 export class AppComponent {
   title = 'type-game';
   sentence = lorem.sentence()
+  enteredText = ""
   successMessageHidden = true
 
   getSentence = () => (this.sentence)
 
   onChangeInput = (value: string) => {
-    if(value === this.sentence){
-      this.successMessageHidden = false
-    }
+    // if(value === this.sentence){
+    //   this.successMessageHidden = false
+    // }
+    this.enteredText = value;
   }
 
 
