@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { lorem } from 'faker'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'type-game';
+  sentence = lorem.sentence()
+  successMessageHidden = true
+
+  getSentence = () => (this.sentence)
+
+  onChangeInput = (value: string) => {
+    if(value === this.sentence){
+      this.successMessageHidden = false
+    }
+  }
+
+
 }
